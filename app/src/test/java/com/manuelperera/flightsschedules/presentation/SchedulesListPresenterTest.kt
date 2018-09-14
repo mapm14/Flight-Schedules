@@ -140,7 +140,7 @@ class SchedulesListPresenterTest {
     }
 
     @Test
-    fun `checkAirportsAndGoToMap when departureAirport and arrivalAirport are selected but the same, should invoke goToMap`() {
+    fun `checkAirportsAndGoToMap when departureAirport and arrivalAirport are selected but the same, should invoke showErrorConfigurationImage`() {
         scheduleListPresenter.departureAirport = getAirport("MAD")
         scheduleListPresenter.arrivalAirport = getAirport("MAD")
 
@@ -155,7 +155,7 @@ class SchedulesListPresenterTest {
     }
 
     @Test
-    fun `checkAirportsAndGoToMap when departureAirport or arrivalAirport are not selected, should invoke goToMap`() {
+    fun `checkAirportsAndGoToMap when departureAirport or arrivalAirport are not selected, should invoke showErrorConfigurationImage`() {
         scheduleListPresenter.checkAirportsAndGoToMap()
 
         assert(scheduleListPresenter.compositeDisposable.size() == 0)

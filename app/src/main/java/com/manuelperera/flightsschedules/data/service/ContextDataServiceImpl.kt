@@ -14,7 +14,7 @@ import javax.inject.Singleton
 @Singleton
 class ContextDataServiceImpl @Inject constructor() : ContextDataService {
 
-    private lateinit var accessToken: String
+    private var accessToken = ""
 
     override fun saveAccessToken(accessToken: String): Observable<Either<Failure, String>> = Observable.create {
         this.accessToken = accessToken
