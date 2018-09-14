@@ -6,7 +6,9 @@ import arrow.core.Left
 import arrow.core.Right
 import com.google.gson.Gson
 import com.manuelperera.flightsschedules.domain.model.base.Failure
-import com.manuelperera.flightsschedules.domain.model.base.Failure.*
+import com.manuelperera.flightsschedules.domain.model.base.Failure.Error
+import com.manuelperera.flightsschedules.domain.model.base.Failure.NoMoreData
+import com.manuelperera.flightsschedules.domain.model.base.Failure.Timeout
 import com.manuelperera.flightsschedules.domain.model.base.ResponseObject
 import com.manuelperera.flightsschedules.domain.model.base.Success
 import io.reactivex.Observable

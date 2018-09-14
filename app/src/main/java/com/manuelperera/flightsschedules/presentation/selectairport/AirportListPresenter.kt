@@ -6,8 +6,8 @@ import com.manuelperera.flightsschedules.domain.model.base.Failure
 import com.manuelperera.flightsschedules.domain.model.base.Failure.NoMoreData
 import com.manuelperera.flightsschedules.domain.usecase.airport.GetAirportsUseCase
 import com.manuelperera.flightsschedules.domain.usecase.airport.GetAirportsUseCase.Params
-import com.manuelperera.flightsschedules.presentation.base.recyclers.PagingView
 import com.manuelperera.flightsschedules.presentation.base.Presenter
+import com.manuelperera.flightsschedules.presentation.base.recyclers.PagingView
 import javax.inject.Inject
 
 class AirportListPresenter @Inject constructor(
