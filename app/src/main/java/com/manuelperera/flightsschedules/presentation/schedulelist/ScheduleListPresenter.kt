@@ -29,8 +29,8 @@ class ScheduleListPresenter @Inject constructor(
 
             addSubscription(getSchedulesUseCase(Params(departure.airportCode, arrival.airportCode, defaultOffset, offset)).subscribe { either ->
                 either.check(
-                        { view?.onLoadPageSuccess(it, isRefreshingList) },
-                        { onGetPageFailure(it, isFirstPage) }
+                        { onGetPageFailure(it, isFirstPage) },
+                        { view?.onLoadPageSuccess(it, isRefreshingList) }
                 )
             })
         }

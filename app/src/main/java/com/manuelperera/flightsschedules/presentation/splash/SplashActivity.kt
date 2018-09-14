@@ -2,6 +2,7 @@ package com.manuelperera.flightsschedules.presentation.splash
 
 import android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK
 import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
+import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar.LENGTH_INDEFINITE
 import com.manuelperera.flightsschedules.R
 import com.manuelperera.flightsschedules.domain.extensions.gone
@@ -18,6 +19,11 @@ class SplashActivity : BaseActivity<SplashPresenter, SplashView>(), SplashView {
 
     override var view: SplashView = this
     override var activityLayout: Int = R.layout.activity_splash
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        presenter.login()
+    }
 
     override fun onLoginSuccess() {
         val intent = ScheduleListActivity.getIntent(this)

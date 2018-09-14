@@ -24,8 +24,8 @@ class AirportListPresenter @Inject constructor(
         addSubscription(
                 getAirportsUseCase(Params(defaultOffset, offset)).subscribe { either ->
                     either.check(
-                            { view?.onLoadPageSuccess(it, false) },
-                            { onGetPageFailure(it, isFirstPage) }
+                            { onGetPageFailure(it, isFirstPage) },
+                            { view?.onLoadPageSuccess(it, false) }
                     )
                 }
         )

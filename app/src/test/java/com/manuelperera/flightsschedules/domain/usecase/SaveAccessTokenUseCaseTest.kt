@@ -2,7 +2,7 @@ package com.manuelperera.flightsschedules.domain.usecase
 
 import com.manuelperera.flightsschedules.domain.service.ContextDataService
 import com.manuelperera.flightsschedules.domain.usecase.login.SaveAccessTokenUseCase
-import com.manuelperera.flightsschedules.extensions.ImmediateSchedulerRule
+import com.manuelperera.flightsschedules.extensions.ImmediateSchedulerRuleUnitTests
 import com.manuelperera.flightsschedules.extensions.assertGeneralsSuccess
 import com.manuelperera.flightsschedules.extensions.getObEitherSuccess
 import com.nhaarman.mockito_kotlin.any
@@ -22,7 +22,7 @@ class SaveAccessTokenUseCaseTest {
 
     @JvmField
     @Rule
-    val immediateSchedulerRule = ImmediateSchedulerRule()
+    val immediateSchedulerRule = ImmediateSchedulerRuleUnitTests()
     @Mock
     private lateinit var contextDataService: ContextDataService
 

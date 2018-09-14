@@ -45,8 +45,8 @@ class AirportListActivity : PagingActivity<AirportListPresenter, PagingView<Airp
     }
 
     override fun onLoadPageSuccess(list: List<Airport>, isRefreshingList: Boolean) {
-        fab.visible()
         super.onLoadPageSuccess(list, isRefreshingList)
+        fab.visible()
     }
 
     private fun airportSelected(airport: Airport) {

@@ -8,6 +8,7 @@ import com.manuelperera.flightsschedules.extensions.assertGeneralsError
 import com.manuelperera.flightsschedules.extensions.assertGeneralsSuccess
 import com.manuelperera.flightsschedules.extensions.getObResultError
 import com.manuelperera.flightsschedules.extensions.getObResultSuccess
+import com.nhaarman.mockito_kotlin.any
 import com.nhaarman.mockito_kotlin.doReturn
 import com.nhaarman.mockito_kotlin.whenever
 import org.junit.Before
@@ -36,18 +37,18 @@ class LoginRepositoryImplTest {
     @Test
     fun `login should return access token`() {
         val accessToken = "d3ukap6h6ym9pchzf3ax6nga"
-        whenever(loginApi.login()).doReturn(getObResultSuccess(LoginResponse(accessToken)))
+        whenever(loginApi.login(any(), any(), any())).doReturn(getObResultSuccess(LoginResponse(accessToken)))
 
-        val testObserver = loginRepositoryImpl.login().test()
+        val testObserver = loginRepositoryImpl.login("id", "secret").test()
 
         testObserver.assertGeneralsSuccess { it == accessToken }
     }
 
     @Test
     fun `login should return failure error`() {
-        whenever(loginApi.login()).doReturn(getObResultError())
+        whenever(loginApi.login(any(), any(), any())).doReturn(getObResultError())
 
-        val testObserver = loginRepositoryImpl.login().test()
+        val testObserver = loginRepositoryImpl.login("id", "secret").test()
 
         testObserver.assertGeneralsError()
     }

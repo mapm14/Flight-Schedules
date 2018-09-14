@@ -12,7 +12,7 @@ class LoginRepositoryImpl @Inject constructor(
         private val loginApiClient: LoginApiClient
 ) : BaseRepository(), LoginRepository {
 
-    override fun login(): Observable<Either<Failure, String>> =
-            modifyObservable(loginApiClient.api.login())
+    override fun login(clientId: String, clientSecret: String): Observable<Either<Failure, String>> =
+            modifyObservable(loginApiClient.api.login(clientId, clientSecret))
 
 }

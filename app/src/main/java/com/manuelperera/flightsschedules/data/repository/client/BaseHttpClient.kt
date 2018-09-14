@@ -2,6 +2,8 @@ package com.manuelperera.flightsschedules.data.repository.client
 
 import arrow.core.Either.Left
 import arrow.core.Either.Right
+import com.manuelperera.flightsschedules.BuildConfig.CLIENT_ID
+import com.manuelperera.flightsschedules.BuildConfig.CLIENT_SECRET
 import com.manuelperera.flightsschedules.BuildConfig.DEBUG
 import com.manuelperera.flightsschedules.domain.service.ContextDataService
 import com.manuelperera.flightsschedules.infrastructure.di.component.DaggerAppComponent
@@ -36,7 +38,7 @@ class BaseHttpClient @Inject constructor(
 
                 if (response.code() == 401) {
                     val loginRepository = DaggerAppComponent.create().provideLoginRepository()
-                    val either = loginRepository.login().blockingFirst()
+                    val either = loginRepository.login(CLIENT_ID, CLIENT_SECRET).blockingFirst()
                     when (either) {
                         is Right -> {
                             contextDataService.saveAccessToken(either.b)

@@ -1,7 +1,7 @@
 package com.manuelperera.flightsschedules.presentation
 
 import com.manuelperera.flightsschedules.domain.usecase.login.LoginUseCase
-import com.manuelperera.flightsschedules.extensions.ImmediateSchedulerRule
+import com.manuelperera.flightsschedules.extensions.ImmediateSchedulerRuleUnitTests
 import com.manuelperera.flightsschedules.extensions.getObEitherError
 import com.manuelperera.flightsschedules.extensions.getObEitherSuccess
 import com.manuelperera.flightsschedules.presentation.splash.SplashPresenter
@@ -25,7 +25,7 @@ class SplashPresenterTest {
 
     @JvmField
     @Rule
-    val immediateSchedulerRule = ImmediateSchedulerRule()
+    val immediateSchedulerRule = ImmediateSchedulerRuleUnitTests()
     @Mock
     private lateinit var loginUseCase: LoginUseCase
     @Mock
@@ -34,14 +34,15 @@ class SplashPresenterTest {
     @Before
     fun setUp() {
         splashPresenter = SplashPresenter(loginUseCase)
+        splashPresenter.init(splashView)
     }
 
     @Test
-    fun `init when login success should invoke onLoginSuccess`() {
+    fun `login success should invoke onLoginSuccess`() {
         val accessToken = "d3ukap6h6ym9pchzf3ax6nga"
         whenever(loginUseCase(any())).doAnswer { getObEitherSuccess(accessToken) }
 
-        splashPresenter.init(splashView)
+        splashPresenter.login()
 
         assert(splashPresenter.compositeDisposable.size() == 1)
         verify(splashPresenter.view)?.onLoginSuccess()
@@ -49,14 +50,14 @@ class SplashPresenterTest {
     }
 
     @Test
-    fun `init when login fail should invoke onLoginError`() {
+    fun `login fail should invoke onLoginError`() {
         whenever(loginUseCase(any())).doAnswer { getObEitherError() }
 
-        splashPresenter.init(splashView)
+        splashPresenter.login()
 
         assert(splashPresenter.compositeDisposable.size() == 1)
-        verify(splashView).onLoginError()
-        verify(splashView, never()).onLoginSuccess()
+        verify(splashPresenter.view)?.onLoginError()
+        verify(splashPresenter.view, never())?.onLoginSuccess()
     }
 
 }

@@ -4,7 +4,7 @@ import com.manuelperera.flightsschedules.domain.model.getAirportList
 import com.manuelperera.flightsschedules.domain.repository.AirportRepository
 import com.manuelperera.flightsschedules.domain.usecase.airport.GetAirportsUseCase
 import com.manuelperera.flightsschedules.domain.usecase.airport.GetAirportsUseCase.Params
-import com.manuelperera.flightsschedules.extensions.ImmediateSchedulerRule
+import com.manuelperera.flightsschedules.extensions.ImmediateSchedulerRuleUnitTests
 import com.manuelperera.flightsschedules.extensions.assertGeneralsError
 import com.manuelperera.flightsschedules.extensions.assertGeneralsSuccess
 import com.manuelperera.flightsschedules.extensions.getObEitherError
@@ -26,7 +26,7 @@ class GetAirportsUseCaseTest {
 
     @JvmField
     @Rule
-    val immediateSchedulerRule = ImmediateSchedulerRule()
+    val immediateSchedulerRule = ImmediateSchedulerRuleUnitTests()
     @Mock
     private lateinit var airportRepository: AirportRepository
 

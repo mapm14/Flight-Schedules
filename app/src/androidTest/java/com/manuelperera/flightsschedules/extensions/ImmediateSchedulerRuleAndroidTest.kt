@@ -10,7 +10,7 @@ import org.junit.runners.model.Statement
 import java.util.concurrent.Executor
 import java.util.concurrent.TimeUnit
 
-class ImmediateSchedulerRule : TestRule {
+class ImmediateSchedulerRuleAndroidTest : TestRule {
 
     private val immediate = object : Scheduler() {
         override fun scheduleDirect(run: Runnable, delay: Long, unit: TimeUnit) =
