@@ -9,7 +9,7 @@ import retrofit2.http.Query
 interface AirportApi {
 
     @GET("references/airports")
-    fun getAirprots(
+    fun getAirports(
             @Query("limit") limit: Int,
             @Query("offset") offset: Int,
             @Query("LHoperated") lhOperated: String = "0",

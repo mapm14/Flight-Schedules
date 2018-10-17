@@ -37,7 +37,7 @@ class AirportRepositoryImplTest {
 
     @Test
     fun `get airports should return airport list`() {
-        whenever(airportApi.getAirprots(
+        whenever(airportApi.getAirports(
                 anyInt(),
                 anyInt(),
                 anyString(),
@@ -54,7 +54,7 @@ class AirportRepositoryImplTest {
 
     @Test
     fun `get airports should return failure error`() {
-        whenever(airportApi.getAirprots(
+        whenever(airportApi.getAirports(
                 anyInt(),
                 anyInt(),
                 anyString(),

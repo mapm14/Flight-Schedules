@@ -14,6 +14,6 @@ class AirportRepositoryImpl @Inject constructor(
 ) : BaseRepository(), AirportRepository {
 
     override fun getAirports(limit: Int, offset: Int): Observable<Either<Failure, List<Airport>>> =
-            modifyObservable(airportApiClient.api.getAirprots(limit, offset))
+            modifyObservable(airportApiClient.api.getAirports(limit, offset))
 
 }
