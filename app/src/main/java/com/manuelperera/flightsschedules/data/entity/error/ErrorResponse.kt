@@ -1,4 +1,4 @@
-package com.manuelperera.flightsschedules.data.repository.base
+package com.manuelperera.flightsschedules.data.entity.error
 
 import com.google.gson.annotations.SerializedName
 import com.manuelperera.flightsschedules.domain.model.base.CallInfo

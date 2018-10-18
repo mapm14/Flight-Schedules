@@ -19,11 +19,11 @@ abstract class PagingAdapter<T : PagingObject>(
     protected abstract var onBindItem: (View, T) -> Unit
     protected abstract var itemLayout: Int
 
-    protected var itemFullLoadingLayout = R.layout.item_full_loading
-    protected var itemSmallLoadingLayout = R.layout.item_small_loading
-    protected var itemFullErrorLayout = R.layout.item_full_error
-    protected var itemSmallErrorLayout = R.layout.item_small_error
-    protected var itemEmptyLayout = R.layout.item_empty
+    protected open var itemFullLoadingLayout = R.layout.item_full_loading
+    protected open var itemSmallLoadingLayout = R.layout.item_small_loading
+    protected open var itemFullErrorLayout = R.layout.item_full_error
+    protected open var itemSmallErrorLayout = R.layout.item_small_error
+    protected open var itemEmptyLayout = R.layout.item_empty
 
     var list = mutableListOf<T>()
         private set

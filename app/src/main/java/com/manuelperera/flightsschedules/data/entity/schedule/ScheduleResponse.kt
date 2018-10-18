@@ -1,4 +1,4 @@
-package com.manuelperera.flightsschedules.data.repository.datasources.api.schedules.model
+package com.manuelperera.flightsschedules.data.entity.schedule
 
 import com.google.gson.annotations.SerializedName
 import com.manuelperera.flightsschedules.domain.model.base.ResponseObject

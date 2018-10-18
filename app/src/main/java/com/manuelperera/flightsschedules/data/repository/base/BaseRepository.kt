@@ -5,6 +5,7 @@ import arrow.core.Either
 import arrow.core.Left
 import arrow.core.Right
 import com.google.gson.Gson
+import com.manuelperera.flightsschedules.data.entity.error.ErrorResponse
 import com.manuelperera.flightsschedules.domain.model.base.Failure
 import com.manuelperera.flightsschedules.domain.model.base.Failure.Error
 import com.manuelperera.flightsschedules.domain.model.base.Failure.NoMoreData

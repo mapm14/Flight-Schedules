@@ -1,6 +1,6 @@
 package com.manuelperera.flightsschedules.data.repository.datasources.api.schedules
 
-import com.manuelperera.flightsschedules.data.repository.datasources.api.schedules.model.ScheduleResponse
+import com.manuelperera.flightsschedules.data.entity.schedule.ScheduleResponse
 import io.reactivex.Observable
 import retrofit2.adapter.rxjava2.Result
 import retrofit2.http.GET

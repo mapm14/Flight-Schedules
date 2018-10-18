@@ -1,8 +1,8 @@
 package com.manuelperera.flightsschedules.data.repository
 
-import com.manuelperera.flightsschedules.data.repository.client.ScheduleApiClient
+import com.manuelperera.flightsschedules.data.net.ScheduleApiClient
 import com.manuelperera.flightsschedules.data.repository.datasources.api.schedules.ScheduleApi
-import com.manuelperera.flightsschedules.data.repository.implementation.ScheduleRepositoryImpl
+import com.manuelperera.flightsschedules.data.repository.implementation.api.ScheduleRepositoryImpl
 import com.manuelperera.flightsschedules.data.repository.model.getScheduleResponse
 import com.manuelperera.flightsschedules.extensions.assertGeneralsError
 import com.manuelperera.flightsschedules.extensions.assertGeneralsSuccess

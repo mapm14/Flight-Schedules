@@ -1,6 +1,6 @@
 package com.manuelperera.flightsschedules.domain.model
 
-import com.manuelperera.flightsschedules.data.repository.base.ErrorResponse.Companion.DEFAULT_CODE_ERROR
+import com.manuelperera.flightsschedules.data.entity.error.ErrorResponse.Companion.DEFAULT_CODE_ERROR
 import com.manuelperera.flightsschedules.domain.model.airport.Airport
 import com.manuelperera.flightsschedules.domain.model.base.CallInfo
 import com.manuelperera.flightsschedules.domain.model.base.Failure

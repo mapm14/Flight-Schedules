@@ -1,11 +1,11 @@
-package com.manuelperera.flightsschedules.data.repository.client
+package com.manuelperera.flightsschedules.data.net
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.manuelperera.flightsschedules.BuildConfig.BASE_URL
+import com.manuelperera.flightsschedules.data.entity.schedule.ScheduleResourceDeserializer
+import com.manuelperera.flightsschedules.data.entity.schedule.ScheduleResponse
 import com.manuelperera.flightsschedules.data.repository.datasources.api.schedules.ScheduleApi
-import com.manuelperera.flightsschedules.data.repository.datasources.api.schedules.model.ScheduleResourceDeserializer
-import com.manuelperera.flightsschedules.data.repository.datasources.api.schedules.model.ScheduleResponse
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory

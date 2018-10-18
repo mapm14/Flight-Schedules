@@ -1,4 +1,4 @@
-package com.manuelperera.flightsschedules.data.repository.client
+package com.manuelperera.flightsschedules.data.net
 
 import com.manuelperera.flightsschedules.BuildConfig.BASE_URL
 import com.manuelperera.flightsschedules.data.repository.datasources.api.airports.AirportApi

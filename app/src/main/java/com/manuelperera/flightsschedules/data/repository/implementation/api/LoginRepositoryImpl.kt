@@ -1,8 +1,8 @@
-package com.manuelperera.flightsschedules.data.repository.implementation
+package com.manuelperera.flightsschedules.data.repository.implementation.api
 
 import arrow.core.Either
+import com.manuelperera.flightsschedules.data.net.LoginApiClient
 import com.manuelperera.flightsschedules.data.repository.base.BaseRepository
-import com.manuelperera.flightsschedules.data.repository.client.LoginApiClient
 import com.manuelperera.flightsschedules.domain.model.base.Failure
 import com.manuelperera.flightsschedules.domain.repository.LoginRepository
 import io.reactivex.Observable

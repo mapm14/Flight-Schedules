@@ -1,4 +1,4 @@
-package com.manuelperera.flightsschedules.data.repository.datasources.api.schedules.model
+package com.manuelperera.flightsschedules.data.entity.schedule
 
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonArray

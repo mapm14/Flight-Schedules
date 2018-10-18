@@ -3,7 +3,7 @@ package com.manuelperera.flightsschedules.extensions
 import arrow.core.Either
 import arrow.core.Left
 import arrow.core.Right
-import com.manuelperera.flightsschedules.data.repository.base.ErrorResponse.Companion.DEFAULT_CODE_ERROR
+import com.manuelperera.flightsschedules.data.entity.error.ErrorResponse.Companion.DEFAULT_CODE_ERROR
 import com.manuelperera.flightsschedules.domain.model.base.Failure
 import com.manuelperera.flightsschedules.domain.model.getFailureError
 import com.manuelperera.flightsschedules.domain.model.getNoMoreData

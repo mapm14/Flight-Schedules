@@ -1,8 +1,8 @@
 package com.manuelperera.flightsschedules.infrastructure.di.module
 
-import com.manuelperera.flightsschedules.data.repository.implementation.AirportRepositoryImpl
-import com.manuelperera.flightsschedules.data.repository.implementation.LoginRepositoryImpl
-import com.manuelperera.flightsschedules.data.repository.implementation.ScheduleRepositoryImpl
+import com.manuelperera.flightsschedules.data.repository.implementation.api.AirportRepositoryImpl
+import com.manuelperera.flightsschedules.data.repository.implementation.api.LoginRepositoryImpl
+import com.manuelperera.flightsschedules.data.repository.implementation.api.ScheduleRepositoryImpl
 import com.manuelperera.flightsschedules.domain.repository.AirportRepository
 import com.manuelperera.flightsschedules.domain.repository.LoginRepository
 import com.manuelperera.flightsschedules.domain.repository.ScheduleRepository

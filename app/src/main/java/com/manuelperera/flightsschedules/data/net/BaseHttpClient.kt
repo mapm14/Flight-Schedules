@@ -1,4 +1,4 @@
-package com.manuelperera.flightsschedules.data.repository.client
+package com.manuelperera.flightsschedules.data.net
 
 import arrow.core.Either.Left
 import arrow.core.Either.Right

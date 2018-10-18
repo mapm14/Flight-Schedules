@@ -1,4 +1,4 @@
-package com.manuelperera.flightsschedules.data.repository.datasources.api.airports.model
+package com.manuelperera.flightsschedules.data.entity.airport
 
 import com.google.gson.annotations.SerializedName
 import com.manuelperera.flightsschedules.domain.model.airport.Airport
